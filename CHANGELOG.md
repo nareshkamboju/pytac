@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.1] - 2026-11-09
+
+### Fixed
+
+- `TAC_FTDI_65` (Hawi MTP) no longer drives an undefined `usb1` pin in its
+  power script, which made every power and EDL operation fail with an error
+  ([#42](https://github.com/qualcomm/pytactl/pull/42)).
+- `TAC_PSOC_7` holds `pedl` longer in `bootToEDL` so the target reliably
+  enters EDL mode ([#43](https://github.com/qualcomm/pytactl/pull/43)).
+
 ## [3.2] - 2026-10-19
 
 ### Added
@@ -263,7 +273,8 @@ so it carries a number of breaking changes for anyone upgrading from 1.4.
 Earlier releases are recorded in the git history and in the
 [GitHub releases](https://github.com/qualcomm/pytactl/releases) page.
 
-[Unreleased]: https://github.com/qualcomm/pytactl/compare/v3.2...HEAD
+[Unreleased]: https://github.com/qualcomm/pytactl/compare/v3.2.1...HEAD
+[3.2.1]: https://github.com/qualcomm/pytactl/compare/v3.2...v3.2.1
 [3.2]: https://github.com/qualcomm/pytactl/compare/v3.1...v3.2
 [3.1]: https://github.com/qualcomm/pytactl/compare/v3.0...v3.1
 [3.0]: https://github.com/qualcomm/pytactl/compare/v2.0...v3.0
